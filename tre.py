@@ -12,10 +12,10 @@ def tre_2():
     altezza = request.form["altezza"]
     if id == "area":
       area = float(base) * float(altezza)
-      return render_template("tre_3.html", base=base, altezza=altezza, area = area)
+      return render_template("quattro_3.html", base=base, altezza=altezza, area = area)
     elif id == "diagonale":
       diagonale = math.sqrt(float(base) **2 + float(altezza)**2)
-      return render_template("tre_4.html", base=base, altezza=altezza, diagonale = diagonale)
+      return render_template("quattro_4.html", base=base, altezza=altezza, diagonale = diagonale)
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=3245, debug=True)
