@@ -15,15 +15,15 @@ def quattro_3():
   base = request.args.get("base")
   altezza = request.args.get("altezza")
   if id == "area":
-    area = float(base) * float(altezza)
-    return render_template("quattro_3.html")
+    area = int(base) * int(altezza)
+    return render_template("quattro_4.html")
   elif id == "diagonale":
-    diagonale = math.sqrt(float(base) **2 + float(altezza)**2)
-    return render_template("quattro_4.html", base=base, altezza=altezza, diagonale = diagonale)
+    diagonale = math.sqrt(int(base) **2 + int(altezza)**2)
+    return render_template("quattro_5.html", base=base, altezza=altezza, diagonale = diagonale)
   else:
-    area = float(base) * float(altezza)
-    diagonale = math.sqrt(float(base) **2 + float(altezza)**2)
-    return render_template("quattro_5.html", base=base, altezza=altezza, area = area, diagonale = diagonale)
+    area = int(base) * int(altezza)
+    diagonale = math.sqrt(int(base) **2 + int(altezza)**2)
+    return render_template("quattro_6.html", base=base, altezza=altezza, area = area, diagonale = diagonale)
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=3245, debug=True)
